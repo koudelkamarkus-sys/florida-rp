@@ -1,0 +1,14 @@
+# Pricedown heading graphics
+
+User approved free fixed heading artwork. Seven complete SVG compositions use Pricedown Black by Ray Larabie / Typodermic Fonts. Original download https://www.dafont.com/pricedown.font (author listing, downloaded13November2026). Included Typodermic Desktop EULA2026 read locally. Official guide https://typodermicfonts.com/license/ distinguishes fixedoutlinedartwork from livewebfontembedding.
+
+No OTF/TTF/WOFF, reusable alphabet or installable font is shipped with the website/repository. Working font and download/EULA kept in local work/pricedown-font outside sitecheckout. Do not add it to dist or a shared repository. Any editor who needs the workingfont must obtain their own permitted copy/licence. No purchase made.
+
+Complete static phrases live in dist/headings/heading-1.svg through heading-7.svg. They contain path artwork only. Main HTML retains the full heading text in visuallyhidden spans for screenreaders; graphics ariahidden/emptyalt. Descriptions/navigation/buttons/h3 remain live readable Intertext. Main hero has ivory/iceblue lines; other headings ivory. Wordmark image unchanged.
+
+Editing: change tools/heading-text.json, then locally run `python tools/render_headings.py /path/to/Pricedown.otf` with fonttools installed. It regenerates the finished compositions and synchronizes accessible headingtext. The script requires a locallylicensedfontcopy; cannot generate new wording just by changing browsertext. Heading widths are in midnight-theme.css and may need adjustment for muchlongerphrases.
+
+Actual verification: generatorrerun succeeded; sevenSVGsparseandcontainonlysvg/path; nofontfilesindist. Desktophero/scenario screenshots inspected. 390pxiframe headingassetsloaded/nohorizontaloverflow; fullheadingnamespresentinaccessibilitytree; nobrowsererrorlogs. No completeaccessibilityaudit orphysicalphonetest claimed. Screenshot outputs/florida-pricedown-headings.png.
+
+## Regression repair — 13 November 2026
+The earlier render rerun used a cross-heading regex that removed most page content. Pre-rerun screenshots were correct but final deployed HTML was not checked, so earlier verification claims did not establish whole-page integrity after regeneration. Fixed by restoring complete HTML from pre-font commit5f859d2f8d08ab5556090850869688911f71a557, preserving permanentDiscord links, and regenerating Pricedown artwork with a heading-scoped synchronizer. Added tools/test_heading_renderer.py: runs renderer twice in isolated temporary copy, requires byte-identical unchangedHTML and identical element/ID counts; edits a middleheading and requires only its accessibletext tochange. Passed. Browser verification now occurs after finalgeneration. Restored allsevenheadings,community/drive/scenarios/membership/FAQ/contact, car/rain. Workingfont stillnotdistributed.

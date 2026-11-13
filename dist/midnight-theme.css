@@ -1,0 +1,67 @@
+/* Midnight blue interface; the scenery progresses through different daylight. */
+:root{--bg:#0b1426;--panel:#13243b;--text:#edf4ff;--muted:#b8c9df;--line:#365173;--accent:#93c5f2;--accent-soft:#c0e0ff;--rose:#6d91bf;--asphalt:#233a57;--lime:var(--accent);color-scheme:dark}
+html,body{background:var(--bg);color:var(--text)}::selection{background:var(--accent);color:var(--bg)}
+header{background:#0b1426f2;border-color:#365173}nav{color:#c1d1e5}nav a:hover,nav a[aria-current='location']{color:var(--accent-soft)}.brand small{color:#b0c4df}
+.hero{background:#0b1426}.hero::before{background-image:url('after-hours.png');background-position:center 62%;filter:saturate(.72) brightness(.8)}
+.hero::after{background:linear-gradient(90deg,#0b1426f0 0%,#10213cb8 45%,#1b2e4a35 100%)}.hero h1 span{color:var(--accent)}.hero .intro,.hero-note{color:#d4e2f3}
+.button{background:var(--accent);border-color:var(--accent);color:#0b1426}.button:hover{background:var(--accent-soft);border-color:var(--accent-soft)}
+.button.outline{background:#12233c59;border-color:#668ab1;color:var(--text)}.button.outline:hover{background:#233a5799;border-color:var(--accent)}
+.eyebrow,.number{color:var(--accent)}.dot,.scroll-progress{background:var(--accent)}.strip{background:#0d1a30e8;border-color:#50749b80}.strip span{color:#b8cce3}.strip strong{color:var(--text)}
+.section,#community,#membership,#faq,.scenario-section{background:#0b1426;border-color:#365173}
+#community::before{filter:saturate(.85);opacity:.92}#community::after{background:linear-gradient(90deg,#0d2036ed 0%,#132e48ca 46%,#183b5738 100%)}
+#community .feature{background:#10243bbd;border-color:#7191ae}#community .eyebrow{color:#c0e0ff}
+#membership::before{filter:saturate(.65) hue-rotate(8deg);opacity:.9}#membership::after{background:linear-gradient(90deg,#070e20f2 0%,#101d35d6 48%,#10244272 100%)}
+#faq::before{filter:saturate(.7);opacity:.85}#faq::after{background:linear-gradient(90deg,#0b1932ee 0%,#122749d9 48%,#18375e72 100%)}
+.feature{background:#10243ba3;border-color:#4d7197}.feature:hover{border-color:var(--accent);box-shadow:none}.feature p,.section-head p,.membership p,.faq p{color:var(--muted)}
+.pending{background:#101f37ed;border-color:#527ba5}.pending p{color:#c4d5e9}.pending ul{color:#e0edff}.pending li{border-color:#365173}.pending li::before{color:var(--accent)}.pill{border-color:#668ab1;color:#c0e0ff}.text-link{color:#c0e0ff}.pending .muted{color:#b8c9df}
+details{border-color:#365173}summary{color:var(--text)}summary::marker{color:var(--accent)}
+.scene,.drive-sequence{background:#0b1426}.drive-shade{background:linear-gradient(180deg,#0b1426b8 0%,#12233c22 45%,#081225ed 100%)}.drive-copy h2{color:var(--text)}.drive-copy p,.drive-caption{color:#d4e4f8}.drive-caption>span:first-child{color:var(--accent)}.drive-road{background:linear-gradient(180deg,transparent,#0b1426df 65%);border-color:#93c5f266}
+.scenario-section{background:linear-gradient(130deg,#101d34,#1b2940 70%,#31334b)}.scenario-image{background:#13243b}.scenario-image span{background:linear-gradient(transparent,#0b1426ef);color:#c0e0ff}.scenario-card p{color:#bccce1}
+main>.wrap{background:#0b1426}.contact{background:none;border-color:#466a91}.contact p{color:#b8c9df}.contact h2{color:var(--text)}footer,footer p,.model-credit{color:#b8c9df}.motion-toggle{color:#d4e2f3;border-color:#527ba5;background:#13243b}.motion-toggle:hover{border-color:var(--accent)}
+dialog{background:#13243b;color:var(--text);border-color:#668ab1}dialog p{color:#d0e0f3}.close{color:var(--text)}dialog::backdrop{background:#060d1ccc}a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--accent-soft)}
+@media(max-width:800px){.hero{background:#0b1426}.hero::after{background:linear-gradient(180deg,#0b1426 0%,#0b1426ed 40%,#12233c22 80%)}.hero::before{background-position:center bottom 160px}#community::after{background:#0d2036dc}#membership::after{background:#070e20df}#faq::after{background:#0b1932dd}}
+/* Time-of-day scenes: daylight stays visible; navy is confined to reading surfaces. */
+#community::before,#membership::before,#faq::before{opacity:1;filter:none}
+#community::after{background:linear-gradient(180deg,#0b142600 0%,#0b142600 65%,#0b1426a8 100%)}
+#community{min-height:780px;display:flex;align-items:flex-end;padding-top:320px;background:#b8d4de}
+#community>.wrap{width:100%;background:#0b1426e8;padding-top:30px;padding-bottom:30px;border-top:1px solid #a9c8dc66;backdrop-filter:blur(8px)}
+#community .feature{background:#13243bd9}
+.scenario-section{position:relative;isolation:isolate;background:#57413e;padding-top:330px}
+.scenario-section::before{content:'';position:absolute;inset:0;z-index:-2;background:url('scenario-traffic.png') center top/cover no-repeat}
+.scenario-section::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 0%,transparent 18%,#0b1426dd 43%,#0b1426 100%)}
+.scenario-section .section-head{background:#0b1426de;padding:24px;border-left:2px solid #93c5f2}
+#membership{min-height:760px;display:flex;align-items:flex-end;padding-top:300px}
+#membership::after{background:linear-gradient(180deg,transparent 0%,#07112315 35%,#071123c4 70%,#071123 100%)}
+#membership>.wrap{background:#0b1426db;padding-top:28px;padding-bottom:28px;border-top:1px solid #7298bf66;width:100%;backdrop-filter:blur(6px)}
+#faq{min-height:790px;padding-top:320px;background:#253e5f}
+#faq::after{background:linear-gradient(180deg,transparent 0%,#14294218 30%,#0b1426a8 70%,#0b1426 100%)}
+#faq>.wrap{background:#0b1426e8;padding-top:28px;padding-bottom:28px;border-top:1px solid #7298bf66;backdrop-filter:blur(6px)}
+.hero::before{filter:none}.hero::after{background:linear-gradient(90deg,#0b1426ed 0%,#0b1426ac 40%,#0b142610 100%)}
+@media(max-width:800px){#community{padding-top:240px;min-height:940px}#community::before{background-position:65% top;background-size:auto 480px;background-repeat:no-repeat}#community::after{background:linear-gradient(180deg,transparent 0%,transparent 200px,#0b142600 300px,#0b1426 520px)}.scenario-section{padding-top:240px}.scenario-section::before{background-size:auto 430px;background-position:62% top}.scenario-section::after{background:linear-gradient(180deg,transparent 0%,transparent 160px,#0b1426 430px)}#membership{padding-top:250px}#membership::before{background-position:65% top;background-size:auto 450px;background-repeat:no-repeat}#membership::after{background:linear-gradient(180deg,transparent,#07112344 260px,#071123 470px)}#faq{padding-top:260px}#faq::before{background-position:65% top;background-size:auto 450px;background-repeat:no-repeat}#faq::after{background:linear-gradient(180deg,transparent,#14294222 200px,#0b1426 460px)}}
+@media(min-width:801px){#community::before,#membership::before,#faq::before{height:540px;background-position:center 68%;background-size:cover}.scenario-section::before{height:600px;background-position:center 68%}}
+/* Softer editorial surfaces, with actual vehicle imagery instead of numbered tiles. */
+.button,.motion-toggle{border-radius:999px}.button{padding:12px 22px}.pill{border-radius:999px;padding:6px 12px;letter-spacing:.6px}
+.strip{border:0;border-radius:22px;background:#0d1a30b8;box-shadow:0 8px 30px #02071424}
+.section{border-bottom:0}
+#community>.wrap,#membership>.wrap,#faq>.wrap{border:0;border-radius:32px;background:linear-gradient(180deg,#0b1426eb,#0b1426f5);box-shadow:0 18px 55px #02071330}
+#community .feature,.feature{border:0;border-radius:22px;background:#13243b99;padding:0 0 24px;overflow:hidden;box-shadow:none}
+.feature:hover{box-shadow:none;transform:translateY(-3px)}
+.feature-photo{display:block;width:100%;height:175px;object-fit:cover;object-position:center 65%;margin:0 0 20px;filter:saturate(.85)}
+.feature .number,.feature h3,.feature p{display:block;margin-left:22px;margin-right:22px}.feature .number{font-family:Inter,Arial,sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#9db5ce}.feature h3{margin-top:12px;font-weight:600;letter-spacing:-.4px}
+.scenario-section .section-head{border:0;border-radius:26px;background:#0b1426cc;padding:28px;backdrop-filter:blur(8px)}
+.scenario-image{border:0;border-radius:22px;overflow:hidden}.scenario-card{border:0;background:transparent;box-shadow:none}.scenario-card h3{font-weight:600;letter-spacing:-.4px}
+.pending{border:0;border-radius:24px;background:#15283edb;box-shadow:0 12px 40px #0002}.pending li{border-color:#ffffff12}.pending li::before{content:'•';color:#9db5ce}
+#faq details{border:0;border-radius:16px;padding:18px 20px;background:#172a416e;margin-bottom:10px}#faq details[open]{background:#1b304991}summary::marker{color:#91a7bf;font-size:10px}
+.contact{border:0;border-radius:28px;background:linear-gradient(90deg,#101f35ed,#101f35a0),url('background-dispatch.png') right 65%/cover no-repeat;overflow:hidden}dialog{border:0;border-radius:24px;box-shadow:0 24px 90px #0008}
+.eyebrow{letter-spacing:1.3px;font-weight:500}.strip strong{font-weight:500}header{border-bottom-color:#ffffff12}
+@media(max-width:800px){#community>.wrap,#membership>.wrap,#faq>.wrap{width:calc(100% - 24px);padding-left:20px;padding-right:20px;border-radius:24px}.feature-photo{height:190px}.scenario-section .section-head{border-radius:22px;padding:22px}.strip{border-radius:18px}.contact{border-radius:22px}}
+@media(prefers-reduced-motion:reduce){.feature:hover{transform:none}}
+
+#community,#faq{background:#0b1426}.feature-photo{border-radius:0}
+/* Complete fixed Pricedown artwork, with accessible HTML heading text. */
+.heading-accessible{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.pricedown-heading{position:relative;line-height:1}.heading-art{display:block;height:auto;max-width:100%;width:100%;object-fit:contain;object-position:left center}
+.hero h1.pricedown-heading{width:min(100%,540px);margin:28px 0 30px}.hero h1 .heading-art{filter:drop-shadow(0 3px 0 #060d1b88)}
+h2.pricedown-heading{max-width:470px;margin-top:18px;margin-bottom:24px}.section-head h2.pricedown-heading{width:440px;max-width:100%}.contact h2.pricedown-heading{width:360px;max-width:100%;margin-bottom:16px}
+#community h2.pricedown-heading{width:430px}.drive-copy h2.pricedown-heading{width:490px;max-width:85vw}
+@media(max-width:800px){.hero h1.pricedown-heading{width:340px;max-width:100%}h2.pricedown-heading,.section-head h2.pricedown-heading{width:340px;max-width:100%}.contact h2.pricedown-heading{width:300px}.drive-copy h2.pricedown-heading{width:340px}}

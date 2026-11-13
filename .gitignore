@@ -1,0 +1,15 @@
+# Keep local keys, font binaries and scratch files out of GitHub.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.otf
+*.ttf
+*.woff
+*.woff2
+*.blend1
+__pycache__/
+work/
+.DS_Store
+Thumbs.db

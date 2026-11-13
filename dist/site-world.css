@@ -1,0 +1,26 @@
+/* A persistent real 3D model, with a separate road-level shadow. */
+.car-3d{position:fixed;z-index:8;pointer-events:none;opacity:0;transition:opacity .5s;contain:layout style;filter:drop-shadow(0 9px 12px #0004)}.car-3d.is-ready{opacity:1}.car-3d canvas{width:100%;height:100%;display:block}.car-3d-ready .drive-car-wrapper{display:none}.car-3d.in-drive{z-index:4}
+#community,#membership,#faq{position:relative;isolation:isolate;background:#0d1512}
+#community::before,#membership::before,#faq::before{content:'';position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;opacity:.45}
+#community::after,#membership::after,#faq::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0a1110f5 0%,#0a1110de 48%,#0a11108c 100%)}
+#community::before{background-image:url('background-coast.png')}
+#membership::before{background-image:url('background-garage.png');background-position:center right}
+#faq::before{background-image:url('background-dispatch.png')}
+.feature{background:#0c15118c;padding:24px 20px;border-top-color:#6f8161}.pending{background:#101b13e6;backdrop-filter:blur(8px)}
+.scenario-section{background:#0b1210}.model-credit{display:block;font-size:9px;line-height:1.6;color:#8e9f94;margin-top:14px;max-width:650px}.model-credit a{text-decoration:underline;text-underline-offset:3px}
+footer{padding-bottom:155px}.contact{padding-right:150px}.drive-copy p{max-width:360px}.drive-sequence{height:210vh}
+@media(max-width:800px){.car-3d{filter:none}footer{padding-bottom:155px}.contact{padding-right:0}#community::after,#membership::after,#faq::after{background:#08110ddd}.drive-sequence{height:180vh}.scenario-image{aspect-ratio:16/10}}
+@media(prefers-reduced-motion:reduce){.car-3d{transition:none}.drive-sequence{height:90vh}}
+
+.car-3d:not(.in-drive)::before{content:'';position:absolute;inset:28% 2% 0;z-index:-1;background:radial-gradient(ellipse at 50% 75%,#0a1310e8 0%,#0a131060 48%,transparent 72%)}
+
+#community::before,#membership::before,#faq::before{opacity:.8}#community::after,#membership::after,#faq::after{background:linear-gradient(90deg,#0a1110e8 0%,#0a1110c4 48%,#0a111055 100%)}@media(max-width:800px){#community::after,#membership::after,#faq::after{background:#08110dc9}}
+
+html,body{overflow-x:clip}@media(max-width:800px){nav a[href='#faq']{display:none}.community-logo{width:82px;height:58px}.brand>span{font-size:12px}.brand small{font-size:7px;letter-spacing:1.5px}.nav{gap:10px}nav{font-size:11px;gap:11px}}
+/* A single persistent canvas, with no mode switches between sections. */
+.car-3d,.car-3d.is-ready{position:fixed;inset:0;width:100vw!important;height:100vh!important;left:0!important;top:0!important;z-index:8;opacity:1;filter:none;contain:strict;transition:none;pointer-events:none}
+.car-3d::before{display:none!important}.car-3d canvas{position:absolute;inset:0;width:100%;height:100%}.car-static{display:none;position:absolute;bottom:20px;right:18px;width:min(250px,35vw);height:auto;filter:drop-shadow(0 10px 8px #0008)}
+.static-alternative .car-static{display:block}.static-alternative canvas{display:none}.car-3d-ready .drive-car-wrapper{display:none}
+@media(max-width:799px){.car-static{width:145px;bottom:8px;right:8px}}
+
+.car-3d.static-alternative canvas{display:none!important}.drive-car-wrapper{display:none!important}

@@ -1,0 +1,63 @@
+[
+  {
+    "file": "heading-1",
+    "lines": [
+      "Florida.",
+      "Your way."
+    ],
+    "hero": true,
+    "text": "Florida. Your way."
+  },
+  {
+    "file": "heading-2",
+    "lines": [
+      "Find your people."
+    ],
+    "hero": false,
+    "text": "Find your people."
+  },
+  {
+    "file": "heading-3",
+    "lines": [
+      "Same streets.",
+      "A different story."
+    ],
+    "hero": false,
+    "text": "Same streets. A different story."
+  },
+  {
+    "file": "heading-4",
+    "lines": [
+      "Every shift starts",
+      "somewhere."
+    ],
+    "hero": false,
+    "text": "Every shift starts somewhere."
+  },
+  {
+    "file": "heading-5",
+    "lines": [
+      "The garage is",
+      "still taking shape."
+    ],
+    "hero": false,
+    "text": "The garage is still taking shape."
+  },
+  {
+    "file": "heading-6",
+    "lines": [
+      "Before you",
+      "clock in."
+    ],
+    "hero": false,
+    "text": "Before you clock in."
+  },
+  {
+    "file": "heading-7",
+    "lines": [
+      "See you in Florida."
+    ],
+    "hero": false,
+    "text": "See you in Florida."
+  }
+]
